@@ -12,16 +12,137 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="joblisting.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .breadcrumb {
+        background-color: red;
+        padding: 10px;
+        border-radius: 20px;
+      }
+      .breadcrumb-item a {
+        color: white;
+      }
+      .breadcrumb-item.active {
+        color: white;
+      }
+      .logo-placeholder {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .logo-placeholder img {
+        max-width: 200px; /* Adjust max-width as needed */
+        height: auto;
+      }
+    </style>
   </head>
   <body>
+    <nav
+      aria-label="breadcrumb"
+      style="background-color: red; padding: 10px; border-radius: 5px"
+    >
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Job Listings</li>
+      </ol>
+    </nav>
+
+    <div class="logo-placeholder">
+      <!-- Replace 'your-logo.png' with your actual logo image file -->
+      <a href="index.html">
+        <img src="assets/carters.png" alt="Carterbiggs" />
+      </a>
+    </div>
+
     <div class="jobs-list-container">
       <h2>5 Jobs</h2>
-
       <input class="job-search" type="text" placeholder="Search here..." />
-
       <div class="jobs"></div>
     </div>
 
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="jobModal"
+      tabindex="-1"
+      aria-labelledby="jobModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="jobModalLabel">Job Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-5">
+            <form id="jobForm">
+              <div class="form-group">
+                <label for="jobTitle">Job Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="jobTitle"
+                  readonly
+                />
+              </div>
+              <div class="form-group">
+                <label for="jobDetails">Job Details</label>
+                <textarea
+                  class="form-control"
+                  id="jobDetails"
+                  rows="3"
+                  readonly
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="applicantName">Your Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="applicantName"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="applicantEmail">Your Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="applicantEmail"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="applicantResume">Upload CV/Resume</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="applicantResume"
+                  name="applicantResume"
+                  placeholder="Upload CV/Resume"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="joblisting.js"></script>
   </body>
 </html>
