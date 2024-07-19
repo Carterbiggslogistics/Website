@@ -1025,7 +1025,7 @@
             <div class="mt-3">
               <p style="font-size: 2rem" class="fw-bold d-flex align-items-center grow-text">Come grow with us.</p>
             </div>
-            <button onclick="handleNavigation()" class="btn btn-primary open-role text-white px-5">See Open Roles</button>
+<button id="openRolesBtn" class="btn btn-primary open-role text-white px-5">See Open Roles</button>
           </div>
         </section>
       </div>
@@ -1166,7 +1166,7 @@
               <div class="mt-3">
                 <p style="font-size: 2rem" class="fw-bold d-flex align-items-center grow-text">Come grow with us.</p>
               </div>
-              <button onclick="handleNavigation()" class="btn btn-primary open-role text-white px-5">See Open Roles</button>
+             <button id="openRolesBtn" class="btn btn-primary open-role text-white px-5">See Open Roles</button>
             </div>
           </section>
         </div>
@@ -1732,10 +1732,19 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script>
-    const handleNavigation = () => {
-      window.location.href = "/joblisting.html"
-    }
-  </script>
+  // Select the button element
+  var openRolesBtn = document.getElementById('openRolesBtn');
+
+  // Add click event listener to the button
+  openRolesBtn.addEventListener('click', function() {
+    handleNavigation();
+  });
+
+  // Function definition outside of inline HTML
+  function handleNavigation() {
+    window.location.href = "joblisting.html";
+  }
+</script>
 </body>
 
 </html>
