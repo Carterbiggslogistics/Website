@@ -30,6 +30,6 @@ These values are embedded into the client bundle at build time. Use only the Sup
 
 - Confirm the Amplify `main` branch has automatic deployments enabled and add the SPA rewrite rule in the Amplify console.
 - Configure the Supabase project and database policies if live Insights or newsletter sign-up is required.
-- Replace the four remaining leadership portrait placeholders in the People section.
+- Replace the three remaining leadership portrait placeholders in the People section.
 - Add optional Supabase build-time environment variables in Amplify and configure database policies before enabling production writes.
 - Verify the homepage, case study deep links, contact form, and newsletter behavior on the deployed domain.

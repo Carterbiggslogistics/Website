@@ -82,7 +82,7 @@ function WorkCards({ items = work }) {
         <article className="solutions__work-card" key={item.title}>
           <Media slot={item.slot} className="solutions__work-media" />
           <h3>{item.title}</h3>
-          <p>{item.text}</p>
+          {item.text && <p>{item.text}</p>}
         </article>
       ))}
     </div>
@@ -183,7 +183,17 @@ export default function Solutions() {
           <h3 className="solutions__what" id="project-capabilities">What we do</h3>
           <CapabilityGrid items={capabilities.project} />
           <h3 className="solutions__built">Projects we’ve managed</h3>
-          <WorkCards items={[work[2], { ...work[0], slot: 'project-management.besda' }]} />
+          <WorkCards
+            items={[
+              { ...work[2], title: 'Medipool', text: '' },
+              {
+                ...work[0],
+                slot: 'project-management.besda',
+                title: 'Track & Trace & Digital Asset Management System',
+                text: '',
+              },
+            ]}
+          />
         </div>
       </section>
 

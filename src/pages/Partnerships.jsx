@@ -43,7 +43,7 @@ const audiences = [
   {
     slot: 'partners.who.institutions',
     title: 'Institutions',
-    text: 'We work with educational institutions, agencies and other organisations to design and implement solutions around their specific needs.',
+    text: 'We work with institutions, agencies and other organisations to design and implement solutions around their specific needs.',
   },
 ];
 

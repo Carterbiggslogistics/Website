@@ -5,13 +5,20 @@ import { Eyebrow, FeatureGrid } from '../components/sections';
 import { companyValues, expertise } from '../content/site';
 import { usePageMotion } from '../motion/usePageMotion';
 
-// Placeholder profiles, exactly as in the design, until the leadership team's details are supplied.
-const leaders = [1, 2, 3, 4].map((id) => ({
-  slot: `people.leader.${id}`,
-  position: 'Position',
-  name: 'Name Name',
-  bio: 'sentence profile highlighting professional expertise, experience and contribution to Carter Biggs.',
-}));
+const leaders = [
+  {
+    slot: 'people.leader.1',
+    position: 'Chief Executive Officer',
+    name: 'Dr. Oluwaseun Abiola',
+    bio: 'Dr. Oluwaseun Abiola is a healthcare and business leader with expertise in public health, strategic procurement, logistics and operational management. A trained dental surgeon and member of the Institute of Directors, he played a key role in coordinating critical medical supplies during Nigeria’s COVID-19 response. He brings strategic leadership and supply-chain expertise to Medipool’s mission of strengthening healthcare procurement and improving access to essential medicines.',
+  },
+  ...[2, 3, 4].map((id) => ({
+    slot: `people.leader.${id}`,
+    position: 'Position',
+    name: 'Name Name',
+    bio: 'sentence profile highlighting professional expertise, experience and contribution to Carter Biggs.',
+  })),
+];
 
 export default function People() {
   const root = useRef(null);

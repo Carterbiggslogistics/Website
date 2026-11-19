@@ -47,6 +47,7 @@ import collaborationMedipool from '../assets/images/collaboration-medipool.webp'
 import partnershipCta from '../assets/images/partnership-cta.webp';
 import peopleHeroTeam from '../assets/images/people-hero-team.webp';
 import peopleOpportunities from '../assets/images/people-opportunities.webp';
+import ceoPortrait from '../assets/images/ceo-oluwaseun-abiola.jpg';
 import insightsHero from '../assets/images/insights-hero.webp';
 import solutionsHeroTeam from '../assets/images/solutions-hero-team.webp';
 import solutionsProjectBesda from '../assets/images/solutions-project-besda.webp';
@@ -435,7 +436,10 @@ export const images = {
     src: peopleOpportunities,
     alt: 'Colleagues reviewing documents together at work',
   },
-  'people.leader.1': { label: 'Leadership portrait', tone: 'navy' },
+  'people.leader.1': {
+    src: ceoPortrait,
+    alt: 'Dr. Oluwaseun Abiola, Chief Executive Officer',
+  },
   'people.leader.2': { label: 'Leadership portrait', tone: 'navy' },
   'people.leader.3': { label: 'Leadership portrait', tone: 'navy' },
   'people.leader.4': { label: 'Leadership portrait', tone: 'navy' },
