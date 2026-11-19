@@ -161,7 +161,7 @@ export default function Solutions() {
           </div>
           <h3 className="solutions__what" id="technology-capabilities">What we do</h3>
           <CapabilityGrid items={capabilities.technology} />
-          <h3 className="solutions__built">What we’ve built</h3>
+          <h3 className="solutions__built">Projects we’ve managed</h3>
           <WorkCards />
         </div>
       </section>
@@ -182,7 +182,7 @@ export default function Solutions() {
           </div>
           <h3 className="solutions__what" id="project-capabilities">What we do</h3>
           <CapabilityGrid items={capabilities.project} />
-          <h3 className="solutions__built">What we’ve built</h3>
+          <h3 className="solutions__built">Projects we’ve managed</h3>
           <WorkCards items={[work[2], { ...work[0], slot: 'project-management.besda' }]} />
         </div>
       </section>
