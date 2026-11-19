@@ -1,0 +1,61 @@
+import { useRef } from 'react';
+import Button from '../components/Button';
+import ContactForm from '../components/ContactForm';
+import SocialLinks from '../components/SocialLinks';
+import { contact } from '../content/site';
+import { usePageMotion } from '../motion/usePageMotion';
+
+export default function Contact() {
+  const root = useRef(null);
+  usePageMotion(root);
+
+  return (
+    <div className="contact" ref={root}>
+      <section className="contact__form-section" data-theme="dark">
+        <div className="container">
+          <div className="contact__form-content">
+            <header className="contact__form-heading">
+              <h1>Let’s make complex systems work.</h1>
+              <p>Fill in the form below</p>
+            </header>
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      <section className="section" data-theme="light">
+        <div className="container">
+          <ul className="contact__grid" data-anim="stagger">
+            <li>
+              <h2 className="contact__label">Visit</h2>
+              <p className="contact__value">{contact.address}</p>
+            </li>
+            <li>
+              <h2 className="contact__label">Call</h2>
+              {contact.phones.map((phone) => (
+                <p className="contact__value" key={phone.href}>
+                  <a href={phone.href}>{phone.label}</a>
+                </p>
+              ))}
+            </li>
+            <li>
+              <h2 className="contact__label">Email</h2>
+              <p className="contact__value">
+                <a href={`mailto:${contact.email}`}>{contact.email}</a>
+              </p>
+            </li>
+          </ul>
+          <div className="contact__social" data-anim="fade">
+            <h2 className="contact__label">Follow us</h2>
+            <SocialLinks />
+          </div>
+          <div data-anim="fade">
+            <Button href={`mailto:${contact.email}`} variant="coral" arrow>
+              Email us
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
