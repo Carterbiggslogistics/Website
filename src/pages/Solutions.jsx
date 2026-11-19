@@ -161,7 +161,7 @@ export default function Solutions() {
           </div>
           <h3 className="solutions__what" id="technology-capabilities">What we do</h3>
           <CapabilityGrid items={capabilities.technology} />
-          <h3 className="solutions__built">Projects we’ve managed</h3>
+          <h3 className="solutions__built">What we’ve built</h3>
           <WorkCards />
         </div>
       </section>
