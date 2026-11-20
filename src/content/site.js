@@ -7,7 +7,6 @@ export const nav = [
     children: [
       { label: 'About Us', to: '/about' },
       { label: 'Partnerships', to: '/partnerships' },
-      { label: 'Our People', to: '/our-people' },
       { label: 'Open Roles', to: '/open-roles' },
     ],
   },
@@ -18,15 +17,15 @@ export const nav = [
     children: [
       { label: 'Oxygen', to: '/case-studies/oxygen' },
       { label: 'Vaccines', to: '/case-studies/vaccines' },
-      { label: 'Sample Trips', to: '/case-studies/sample-trips' },
+      { label: 'Sample Management', to: '/case-studies/sample-trips' },
       { label: 'Surge Staff', to: '/case-studies/surge-staff' },
       { label: 'Biobank', to: '/case-studies/biobank' },
       { label: 'Edutrace', to: '/case-studies/edutrace' },
       { label: 'Carepacks', to: '/case-studies/carepacks' },
-      { label: 'Cash Collect', to: '/case-studies/cash-collect' },
+      { label: 'Inbound Passenger Testing', to: '/case-studies/cash-collect' },
     ],
   },
-  { label: 'Impact', to: '/insights' },
+  { label: 'Insights', to: '/insights' },
 ];
 
 // Routes that appear in the navigation but have no supplied design yet.

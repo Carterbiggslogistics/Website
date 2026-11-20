@@ -69,7 +69,7 @@ const vaccineDeliveryItems = [
 const sampleTripsDeliveryItems = [
   {
     title: 'Multi-state coverage',
-    text: 'Ran collection and delivery trips across 13+ Nigerian states.',
+    text: 'Ran collection and delivery trips across 20 Nigerian states.',
     slot: 'case-study.sample-trips.coverage',
   },
   {
@@ -79,7 +79,7 @@ const sampleTripsDeliveryItems = [
   },
   {
     title: 'Trip management',
-    text: 'Completed over 3,000 trips with a strong, growing success rate.',
+    text: 'Completed 6,785 trips with a strong, growing success rate.',
     slot: 'case-study.sample-trips.management',
   },
   {
@@ -171,9 +171,9 @@ const vaccineImpactMetrics = [
 ];
 
 const sampleTripsAchievementStats = [
-  { icon: 'truck', value: '3,236', label: 'Total trips completed' },
-  { icon: 'vial', value: '16,000+', label: 'Samples delivered' },
-  { icon: 'deliveryTime', value: '96.9%', label: <>On-time delivery<br />rate (2024)</> },
+  { icon: 'truck', value: '6,785', label: 'Total trips completed' },
+  { icon: 'vial', value: '37,000+', label: 'Samples transported' },
+  { icon: 'deliveryTime', value: '99.9%', label: <>On-time delivery<br />rate</> },
 ];
 
 const surgeStaffAchievementStats = [
@@ -257,7 +257,7 @@ const caseStudyPages = {
     challengeCopy: 'Samples had to reach testing laboratories within 48 hours, across many states, with zero losses.',
     challenges: [
       { icon: 'deliveryTime', text: 'Samples needed to arrive at labs within a strict 48-hour window' },
-      { icon: 'foldedMap', text: 'Coverage spanned 13+ states with very different trip volumes' },
+      { icon: 'foldedMap', text: 'Coverage spanned 20 states with very different trip volumes' },
       { icon: 'solidCheckCircle', text: 'Reliability had to stay high month over month, with no casualties' },
       { icon: 'chart', text: 'Trip volumes grew substantially between 2023 and 2024' },
     ],
@@ -265,7 +265,6 @@ const caseStudyPages = {
     deliveryItems: sampleTripsDeliveryItems,
     milestones: [
       { date: 'Jan 2023', detail: 'Operations commence nationwide' },
-      { date: 'Sep 2023', detail: 'Contract renewal & price review', above: true },
       { date: '2024', detail: 'Trip volume nearly doubles' },
     ],
     achievementTitle: 'Reliability that keeps improving',
@@ -283,14 +282,13 @@ const caseStudyPages = {
       { month: 'Sep', year2024: 163, year2023: 113 },
       { month: 'Oct', year2024: 170, year2023: 164 },
     ],
-    monthlyTripsNote: 'On-time delivery within 48 hours improved from 92.6% in 2023 to 96.9% in 2024.',
     overallImpactTitle: <>A nationwide sample network that<br />keeps getting more reliable.</>,
     overallMetrics: [
       { icon: 'foldedMap', label: <>Nationwide<br />coverage</> },
       { icon: 'solidCheckCircle', label: <>Zero<br />casualties</> },
       { icon: 'chart', label: <>Improving<br />reliability</> },
     ],
-    overallImpactCopy: 'Over 3,000 trips and 16,000+ samples delivered nationwide, with on-time delivery improving year over year and zero casualties recorded.',
+    overallImpactCopy: 'Over 6,785 trips and 37,000+ samples transported nationwide, with a 99.9% on-time delivery rate and zero casualties recorded.',
     ctaSlot: 'case-study.oxygen.cta',
     ctaLead: 'The NCDC Sample Management Project shows how Carter Biggs runs time-critical health logistics reliably, at national scale.',
   },
@@ -302,7 +300,7 @@ const caseStudyPages = {
     clientName: 'Port Health Services, Nigeria',
     clientDescription: 'Carter Biggs managed surge personnel deployed at Nigeria’s international airports for Port Health Services.',
     start: 'Apr 2022',
-    end: 'Apr 2022',
+    end: 'Dec 2022',
     timelineDots: 7,
     challengeTitle: 'Right-sizing a nationwide workforce',
     challengeCopy: 'Surge staffing needed right-sizing across five airports, plus a way to curb absenteeism from duty.',
@@ -569,8 +567,8 @@ const caseStudyPages = {
     ctaLead: 'The Carepack Distribution Project shows how Carter Biggs turns statewide health logistics into fast, reliable, last-mile delivery.',
   },
   'cash-collect': {
-    name: 'Cash Collect',
-    heroTitle: <>Carter Biggs collaboration on the Airport Cash Payment Collection Project</>,
+    name: 'Inbound Passenger Testing',
+    heroTitle: <>Carter Biggs collaboration on Inbound Passenger Testing: Registration, Payments and Data Management.</>,
     heroDescription: <>Nationwide PCR test payment collection across Nigeria’s international airports.</>,
     heroSlot: 'case-study.cash-collect.hero',
     clientName: 'Nigeria’s International Airports',
@@ -613,7 +611,7 @@ const caseStudyPages = {
       { date: 'Sep 2020', detail: 'Operations begin at Lagos (MMIA)' },
       { date: 'Sep 2021', detail: 'Nigeria Travel Portal partnership', above: true },
       { date: 'Nov 2021', detail: 'Abuja airport operations begin' },
-      { date: 'Dec 2021', detail: 'Port Harcourt & Kano operations begin', above: true },
+      { date: 'Dec 2021', detail: 'Port Harcourt, Kano & Enugu operations begin', above: true },
       { date: 'Jan 2022', detail: 'PCR price reviewed downward' },
       { date: 'Dec 2022', detail: 'Project closes nationwide', above: true },
     ],
@@ -909,7 +907,9 @@ export default function CaseStudies() {
               ))}
             </div>
           </div>
-          <p className="case-studies__monthly-note"><span aria-hidden="true">i</span>{page.monthlyTripsNote}</p>
+          {page.monthlyTripsNote && (
+            <p className="case-studies__monthly-note"><span aria-hidden="true">i</span>{page.monthlyTripsNote}</p>
+          )}
         </div>
       </section>
       </>}

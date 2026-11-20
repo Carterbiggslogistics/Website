@@ -56,8 +56,8 @@ const work = [
 
 const proof = [
   { slot: 'solutions.proof.tablets', value: '60,000+', label: 'Educational tablets tracked and managed' },
-  { slot: 'solutions.proof.specimens', value: '154,169', label: 'Specimens collected' },
-  { slot: 'solutions.proof.oxygen', value: '45,150', label: 'Oxygen supplied' },
+  { slot: 'solutions.proof.specimens', value: '180,000+', label: 'Specimens transported' },
+  { slot: 'solutions.proof.oxygen', value: '48,000+', label: 'Oxygen supplied' },
   { slot: 'solutions.proof.carepacks', value: '15,600', label: 'COVID-19 care packs delivered' },
 ];
 

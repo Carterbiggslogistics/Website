@@ -15,7 +15,6 @@ const Contact = lazy(() => import('./pages/Contact'));
 const InsightDetail = lazy(() => import('./pages/InsightDetail'));
 const Insights = lazy(() => import('./pages/Insights'));
 const Partnerships = lazy(() => import('./pages/Partnerships'));
-const People = lazy(() => import('./pages/People'));
 
 // Rendered before the routes so its layout effect runs ahead of each page's
 // motion setup, which measures positions from the top of the document.
@@ -58,7 +57,7 @@ function Shell() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/partnerships" element={<Partnerships />} />
-            <Route path="/our-people" element={<People />} />
+            <Route path="/our-people" element={<Navigate to="/" replace />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/:slug" element={<CaseStudies />} />
