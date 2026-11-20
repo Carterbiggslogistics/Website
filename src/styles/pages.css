@@ -1569,6 +1569,22 @@
   --solutions-divider: rgba(255, 255, 255, 0.35);
 }
 
+@media (min-width: 992px) {
+  .solutions__section--advisory {
+    padding-block: clamp(80px, 8.54vw, 123px);
+  }
+
+  .solutions__section--advisory .container {
+    width: min(1278px, calc(100% - var(--gutter) - var(--gutter)));
+    max-width: none;
+    padding-inline: 0;
+  }
+
+  .solutions__section--advisory .solutions__intro {
+    margin-bottom: clamp(56px, 5.97vw, 86px);
+  }
+}
+
 .solutions__section:not(.solutions__section--sky) .solutions__capabilities {
   --solutions-divider: rgba(26, 26, 26, 0.18);
 }

@@ -29,6 +29,14 @@ const capabilities = {
     { icon: 'eye', title: 'Monitoring & Reporting', text: 'Tracking progress, identifying risks and providing the information required for informed decision-making.' },
     { icon: 'solidShield', title: 'Quality & Delivery Assurance', text: 'Maintaining focus on agreed standards, deliverables and outcomes throughout implementation.' },
   ],
+  advisory: [
+    { icon: 'brain', title: 'Strategy & Planning', text: 'Defining direction, priorities and roadmaps that align resources with organizational goals.' },
+    { icon: 'network', title: 'Supply Chain Advisory', text: 'Assessing logistics and supply chain operations to improve reliability, visibility and cost efficiency.' },
+    { icon: 'chart', title: 'Process Improvement', text: 'Reviewing workflows and standardizing processes to reduce delays, errors and waste.' },
+    { icon: 'building', title: 'Organizational Design', text: 'Structuring teams, roles, governance and policies to support growth and accountability.' },
+    { icon: 'monitor', title: 'Digital Advisory', text: 'Identifying and specifying the systems and data tools that fit how operations really work.' },
+    { icon: 'deliveryTime', title: 'Feasibility & Cost Analysis', text: 'Evaluating options, costs and risks so decisions rest on evidence.' },
+  ],
 };
 
 const work = [
@@ -104,8 +112,8 @@ export default function Solutions() {
               and processes to work together.
             </p>
             <p className="lead" data-split="lines">
-              Carter Biggs brings these elements together through three core capabilities: Medical Logistics,
-              Technology Solutions and Project Management.
+              Carter Biggs brings these elements together through four core capabilities: Medical Logistics,
+              Technology Solutions, Project Management and Advisory & Consulting.
             </p>
             <div className="hero__actions" data-anim="fade">
               <Button to="/contact" variant="coral">Work with us</Button>
@@ -194,6 +202,23 @@ export default function Solutions() {
               },
             ]}
           />
+        </div>
+      </section>
+
+      <section className="section solutions__section solutions__section--sky solutions__section--advisory" id="advisory-consulting" data-theme="sky">
+        <div className="container">
+          <div className="solutions__intro">
+            <Eyebrow className="eyebrow--on-color">From insight to impact</Eyebrow>
+            <h2 className="h2">Advisory &amp; Consulting</h2>
+            <p>
+              We help organizations understand their challenges, evaluate their options and make confident decisions.
+              Our recommendations are grounded in how work actually gets done, and we stay involved to help turn them
+              into action.
+            </p>
+            <Button href="#advisory-capabilities" variant="navy">Explore Advisory &amp; Consulting</Button>
+          </div>
+          <h3 className="solutions__what" id="advisory-capabilities">What we do</h3>
+          <CapabilityGrid items={capabilities.advisory} />
         </div>
       </section>
 
